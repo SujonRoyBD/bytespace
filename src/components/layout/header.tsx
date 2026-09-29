@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -19,24 +20,26 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#0047FF] border-b border-white/10 text-white transition-all shadow-xs">
+    <header className="sticky top-0 z-40 w-full bg-[#0047FF] blueprint-grid text-white transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 relative">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 group transition-transform active:scale-95"
+            className="flex items-center group transition-transform active:scale-95 shrink-0"
           >
-            <div className="w-9 h-9 rounded-xl bg-[#D2FF00] flex items-center justify-center shadow-md shadow-[#D2FF00]/20 group-hover:rotate-6 transition-transform">
-              <div className="w-4 h-4 bg-[#0047FF] rounded-md rotate-45 transform" />
-            </div>
-            <span className="font-bold text-2xl tracking-tight text-white font-sans flex items-center">
-              Byte<span className="text-[#D2FF00]">Space</span>
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="ByteSpace"
+              width={140}
+              height={36}
+              priority
+              className="h-7 sm:h-8 w-auto object-contain"
+            />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop Navigation Links - Centered */}
+          <nav className="hidden md:flex items-center gap-9 absolute left-1/2 -translate-x-1/2">
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
@@ -46,31 +49,28 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-[#D2FF00] relative py-1",
-                    isActive ? "text-[#D2FF00] font-semibold" : "text-white/90"
+                    "text-sm font-normal tracking-wide transition-opacity hover:opacity-100",
+                    isActive ? "text-white font-medium opacity-100" : "text-white/85 opacity-85"
                   )}
                 >
                   {link.name}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#D2FF00] rounded-full" />
-                  )}
                 </Link>
               );
             })}
           </nav>
 
-          {/* Action Buttons: Direct Page Links to /login and /register */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* Action Links: Sign In, Join Us & Shopping Bag */}
+          <div className="hidden md:flex items-center gap-7 shrink-0">
             <Link
               href="/login"
-              className="text-sm font-medium text-white/90 hover:text-[#D2FF00] transition-colors px-3 py-2"
+              className="text-sm font-normal text-white/90 hover:text-white transition-colors"
             >
               Sign In
             </Link>
 
             <Link
               href="/register"
-              className="text-sm font-medium text-white/90 hover:text-[#D2FF00] transition-colors px-3 py-2"
+              className="text-sm font-normal text-white/90 hover:text-white transition-colors"
             >
               Join Us
             </Link>
@@ -78,14 +78,12 @@ export function Header() {
             {/* Shopping Cart Icon */}
             <Link
               href="/courses/build-digital-asset"
-              className="relative p-2 text-white hover:text-[#D2FF00] transition-colors rounded-full hover:bg-white/10"
-              title="Your Enrolled Courses"
+              className="relative p-1 text-white hover:text-white/80 transition-colors"
+              title="Shopping Cart"
             >
-              <ShoppingBag className="w-5 h-5" />
+              <ShoppingBag className="w-5 h-5 stroke-[1.75]" />
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-[#D2FF00] text-[#0f172a] text-[10px] font-bold rounded-full flex items-center justify-center">
-                  {cartCount}
-                </span>
+                <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-[#D2FF00] rounded-full ring-2 ring-[#0047FF]" />
               )}
             </Link>
           </div>
@@ -94,18 +92,16 @@ export function Header() {
           <div className="flex md:hidden items-center gap-3">
             <Link
               href="/courses/build-digital-asset"
-              className="relative p-2 text-white hover:text-[#D2FF00]"
+              className="relative p-1 text-white hover:text-white/80"
             >
-              <ShoppingBag className="w-5 h-5" />
+              <ShoppingBag className="w-5 h-5 stroke-[1.75]" />
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 bg-[#D2FF00] text-[#0f172a] text-[10px] font-bold rounded-full flex items-center justify-center">
-                  {cartCount}
-                </span>
+                <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-[#D2FF00] rounded-full ring-2 ring-[#0047FF]" />
               )}
             </Link>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-white hover:text-[#D2FF00] rounded-lg hover:bg-white/10"
+              className="p-2 text-white hover:text-white/80 rounded-lg"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
