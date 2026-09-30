@@ -6,7 +6,8 @@ export function TestimonialsSection() {
     {
       name: "Janelle M.",
       role: "3D Artist | Learner",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      avatar:
+        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
       content:
         "The 3D Asset Creation course completely exceeded my expectations. The hands-on project workflow gave me the confidence to transition into freelance 3D design full time. I cannot recommend ByteSpace enough!",
       rating: 5,
@@ -14,7 +15,8 @@ export function TestimonialsSection() {
     {
       name: "James L.",
       role: "UI/UX Designer",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
       content:
         "From foundational principles to advanced prototyping, every module provided practical insights that I use daily at work. The community and instructor feedback were game changers for my career.",
       rating: 5,
@@ -22,7 +24,8 @@ export function TestimonialsSection() {
     {
       name: "Alex D.",
       role: "Frontend Learner",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      avatar:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
       content:
         "The structure of the courses is unmatched. Clear milestones, top-tier asset downloads, and responsive instructors make ByteSpace my go-to learning platform for technical skills.",
       rating: 5,
@@ -40,8 +43,12 @@ export function TestimonialsSection() {
         </div>
 
         <div className="lg:col-span-7">
-          <div className="bg-[#D2FF00]/15 border border-[#D2FF00]/60 rounded-3xl p-6 sm:p-8 text-xs sm:text-sm text-slate-800 leading-relaxed">
-            At ByteSpace, our vibrant community of learners and creators is at the heart of everything we do. Dive into these testimonials to discover the impact our courses have had on individuals from various walks of life. Their experiences, successes, and insights reflect the power of our platform and the dedication of our instructors.
+          <div className=" rounded-3xl p-6 sm:p-8 text-xs sm:text-sm text-slate-800 leading-relaxed">
+            At ByteSpace, our vibrant community of learners and creators is at
+            the heart of everything we do. Dive into these testimonials to
+            discover the impact our courses have had on individuals from various
+            walks of life. Their experiences, successes, and insights reflect
+            the power of our platform and the dedication of our instructors.
           </div>
         </div>
       </div>
@@ -60,14 +67,19 @@ export function TestimonialsSection() {
                 className="w-11 h-11 rounded-full object-cover ring-2 ring-slate-100"
               />
               <div>
-                <h4 className="font-bold text-xs sm:text-sm text-slate-900">{t.name}</h4>
+                <h4 className="font-bold text-xs sm:text-sm text-slate-900">
+                  {t.name}
+                </h4>
                 <p className="text-[11px] text-slate-400">{t.role}</p>
               </div>
             </div>
 
             <div className="flex items-center gap-0.5">
               {[...Array(t.rating)].map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                <Star
+                  key={i}
+                  className="w-3.5 h-3.5 fill-amber-400 text-amber-400"
+                />
               ))}
             </div>
 

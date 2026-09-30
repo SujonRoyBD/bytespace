@@ -15,9 +15,9 @@ export function HeroSection() {
   };
 
   return (
-    <section className="w-full h-[900px] blueprint-grid text-white pt-10 sm:pt-14 pb-16 sm:pb-24 lg:pb-28 relative overflow-hidden">
+    <section className="w-full min-h-[750px] sm:min-h-[860px] lg:min-h-[960px] h-auto blueprint-grid text-white pt-8 sm:pt-14 pb-16 sm:pb-24 lg:pb-28 relative overflow-hidden">
       {/* 1. Yellow Pitch (Top-Left Lime Spiral) */}
-      <div className="absolute top-4 sm:top-8 left-2 sm:left-6 lg:left-12 w-24 sm:w-36 lg:w-48 pointer-events-none select-none z-10 animate-float-slow">
+      <div className="absolute top-3 sm:top-8 left-2 sm:left-6 lg:left-12 w-16 sm:w-28 md:w-36 lg:w-48 pointer-events-none select-none z-10 animate-float-slow">
         <Image
           src="/images/yellowpitch.png"
           alt="3D Yellow Pitch"
@@ -29,7 +29,7 @@ export function HeroSection() {
       </div>
 
       {/* 2. White Pitch (Mid-Left White Squiggle) */}
-      <div className="absolute top-[34%] sm:top-[38%] left-8 sm:left-16 lg:left-28 w-14 sm:w-20 lg:w-28 pointer-events-none select-none z-10 animate-float-reverse">
+      <div className="absolute top-[28%] sm:top-[34%] lg:top-[38%] left-2 sm:left-8 lg:left-28 w-10 sm:w-16 lg:w-28 pointer-events-none select-none z-10 animate-float-reverse opacity-70 sm:opacity-100">
         <Image
           src="/images/whitepitch.png"
           alt="3D White Squiggle"
@@ -41,7 +41,7 @@ export function HeroSection() {
       </div>
 
       {/* 3. Rounded Torus Ring (Bottom-Left Donut) */}
-      <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-6 lg:left-12 w-28 sm:w-44 lg:w-56 pointer-events-none select-none z-20 animate-float-slow">
+      <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-6 lg:left-12 w-20 sm:w-32 md:w-44 lg:w-56 pointer-events-none select-none z-20 animate-float-slow">
         <Image
           src="/images/rounded.png"
           alt="3D Rounded Torus"
@@ -53,7 +53,7 @@ export function HeroSection() {
       </div>
 
       {/* 4. Right Site (Top-Right Lime 3D Cylinder) */}
-      <div className="absolute top-2 sm:top-6 -right-4 sm:right-2 lg:right-6 w-28 sm:w-40 lg:w-52 pointer-events-none select-none z-10 animate-float-reverse">
+      <div className="absolute top-2 sm:top-6 -right-2 sm:right-2 lg:right-6 w-16 sm:w-28 md:w-40 lg:w-52 pointer-events-none select-none z-10 animate-float-reverse">
         <Image
           src="/images/rightSite.png"
           alt="3D Lime Cylinder"
@@ -65,7 +65,7 @@ export function HeroSection() {
       </div>
 
       {/* 5. Trivuj (Mid-Right White Pyramid/Triangle) */}
-      <div className="absolute top-[42%] sm:top-[44%] right-6 sm:right-16 lg:right-28 w-20 sm:w-28 lg:w-36 pointer-events-none select-none z-10 animate-float-slow">
+      <div className="absolute top-[36%] sm:top-[42%] right-2 sm:right-10 lg:right-28 w-12 sm:w-20 lg:w-36 pointer-events-none select-none z-10 animate-float-slow opacity-70 sm:opacity-100">
         <Image
           src="/images/trivuj.png"
           alt="3D White Triangle"
@@ -77,7 +77,7 @@ export function HeroSection() {
       </div>
 
       {/* 6. White Pitch (Bottom-Right White Squiggle) */}
-      <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-10 lg:right-16 w-20 sm:w-28 lg:w-36 pointer-events-none select-none z-10 animate-float-reverse">
+      <div className="absolute bottom-4 sm:bottom-6 right-2 sm:right-6 lg:right-16 w-14 sm:w-24 lg:w-36 pointer-events-none select-none z-10 animate-float-reverse">
         <Image
           src="/images/whitepitch.png"
           alt="3D White Pitch"
@@ -90,48 +90,48 @@ export function HeroSection() {
 
       {/* MAIN HERO CONTENT */}
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5 sm:space-y-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4 sm:space-y-6">
         {/* Main Headline */}
-        <h1 className=" font-semibold text-[72px] leading-[120%] tracking-[-1%] text-center max-w-4xl mx-auto">
-          Get Access to Hundreds <br />
+        <h1 className="font-semibold text-3xl sm:text-5xl md:text-6xl lg:text-[72px] leading-[115%] sm:leading-[120%] tracking-[-1%] text-center max-w-4xl mx-auto px-2">
+          Get Access to Hundreds <br className="hidden sm:inline" />
           Courses Available
         </h1>
 
         {/* Subtitle */}
-        <p className="font-satoshi font-normal text-[18px] leading-[160%] tracking-[0%] text-center">
+        <p className="font-satoshi font-normal text-xs sm:text-base md:text-[18px] leading-[160%] tracking-[0%] text-center max-w-2xl mx-auto px-2 text-slate-100">
           Unlock your creativity, gain valuable knowledge, and grow your
           business with our wide range of courses.
         </p>
 
         {/* Search Bar Pill Container */}
-        <div className="max-w-xl mx-auto pt-2 pb-2">
+        <div className="max-w-md sm:max-w-xl mx-auto pt-1 sm:pt-2 pb-2 px-2">
           <form
             onSubmit={handleSearch}
-            className="relative flex items-center bg-white rounded-full p-1.5 pl-4 sm:pl-5 shadow-2xl transition-all focus-within:ring-2 focus-within:ring-[#D2FF00]/50"
+            className="relative flex items-center bg-white rounded-full p-1.5 pl-3.5 sm:pl-5 shadow-2xl transition-all focus-within:ring-2 focus-within:ring-[#D2FF00]/50"
           >
-            <Search className="w-5 h-5 text-slate-400 mr-2.5 shrink-0" />
+            <Search className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 mr-2 sm:mr-2.5 shrink-0" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Course, topic, creator"
-              className="w-full bg-transparent text-slate-900 text-xs sm:text-sm focus:outline-none placeholder:text-slate-400 font-normal py-2"
+              className="w-full bg-transparent text-slate-900 text-xs sm:text-sm focus:outline-none placeholder:text-slate-400 font-normal py-1.5 sm:py-2 min-w-0"
             />
             <button
               type="submit"
-              className="bg-[#D2FF00] hover:bg-[#c2ee00] text-slate-950 font-bold text-xs sm:text-sm px-6 sm:px-7 py-2.5 rounded-full transition-all shrink-0 shadow-sm active:scale-95 cursor-pointer"
+              className="bg-[#D2FF00] hover:bg-[#c2ee00] text-slate-950 font-bold text-xs sm:text-sm px-4 sm:px-7 py-2 sm:py-2.5 rounded-full transition-all shrink-0 shadow-sm active:scale-95 cursor-pointer"
             >
               Search
             </button>
           </form>
         </div>
 
-        <div className="relative max-w-lg sm:max-w-xl mx-auto mt-6 sm:mt-10 flex items-center justify-center">
+        <div className="relative max-w-xs sm:max-w-xl mx-auto mt-6 sm:mt-10 flex items-center justify-center">
           {/* Subtle Ambient Glow behind Circle */}
-          <div className="absolute w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full  blur-3xl pointer-events-none scale-105" />
+          <div className="absolute w-[240px] h-[240px] sm:w-[420px] sm:h-[420px] md:w-[600px] md:h-[600px] lg:w-[860px] lg:h-[860px] rounded-full blur-3xl pointer-events-none scale-105" />
 
           {/* Perfectly Proportioned Lime Green Circle */}
-          <div className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full bg-[#D2FF00] overflow-hidden top-30 flex items-end justify-center  ring-4 ring-white/10 shrink-0">
+          <div className="relative w-[240px] h-[240px] sm:w-[420px] sm:h-[420px] md:w-[600px] md:h-[600px] lg:w-[860px] lg:h-[860px] rounded-full bg-[#D2FF00] overflow-hidden top-12 sm:top-20 md:top-24 lg:top-30 flex items-end justify-center ring-4 ring-white/10 shrink-0">
             {/* Student Image */}
             {/* <Image
               src="/images/student.jpg"
@@ -144,40 +144,40 @@ export function HeroSection() {
           </div>
 
           {/* Floating Card 1: UI/UX Design (Left) */}
-          <div className="absolute -left-2 sm:-left-10 lg:-left-16 top-[18%] sm:top-[20%] z-30 bg-white rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
-            <div className="font-satoshi font-medium text-[16px] leading-[120%] align-middle">
+          <div className="absolute -left-1 sm:-left-6 md:-left-12 lg:-left-16 top-[15%] sm:top-[18%] lg:top-[20%] z-30 bg-white rounded-xl sm:rounded-2xl px-3 py-2 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
+            <div className="font-satoshi font-medium text-xs sm:text-sm md:text-[16px] leading-[120%] align-middle">
               UI/UX Design
             </div>
-            <div className="font-satoshi font-normal text-[12px] leading-[160%] mt-0.5 whitespace-nowrap">
+            <div className="font-satoshi font-normal text-[10px] sm:text-xs md:text-[12px] leading-[160%] mt-0.5 whitespace-nowrap text-slate-600">
               200 Courses &nbsp;•&nbsp; 1000+ Students
             </div>
           </div>
 
           {/* Floating Card 2: Learning Progress 55% (Right) */}
-          <div className="absolute -right-2 sm:-right-8 lg:-right-14 top-[20%] sm:top-[22%] z-30 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-40 sm:w-48 animate-in fade-in zoom-in duration-500">
-            <div className="font-satoshi font-medium text-[14px] leading-[120%] align-middle">
+          <div className="absolute -right-1 sm:-right-6 md:-right-10 lg:-right-14 top-[18%] sm:top-[20%] lg:top-[22%] z-30 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 md:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-32 sm:w-40 md:w-48 animate-in fade-in zoom-in duration-500">
+            <div className="font-satoshi font-medium text-[11px] sm:text-xs md:text-[14px] leading-[120%] align-middle text-slate-600">
               Learning Progress
             </div>
-            <div className=" font-semibold text-[48px] leading-[120%] tracking-[-1%] align-middle">
+            <div className="font-semibold text-2xl sm:text-3xl md:text-[48px] leading-[120%] tracking-[-1%] align-middle text-slate-900">
               55%
             </div>
-            <div className="w-full h-2 sm:h-2.5 bg-slate-100 rounded-full overflow-hidden mt-1.5">
+            <div className="w-full h-1.5 sm:h-2 md:h-2.5 bg-slate-100 rounded-full overflow-hidden mt-1 sm:mt-1.5">
               <div className="h-full w-[55%] bg-[#D2FF00] rounded-full" />
             </div>
           </div>
 
           {/* Floating Card 3: Happy Students (Bottom Left) */}
-          <div className="absolute -left-2 sm:-left-8 lg:-left-14  z-30 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
-            <div className="font-satoshi font-medium text-[16px] leading-[120%] align-middle">
+          <div className="absolute -left-1 sm:-left-6 md:-left-10 lg:-left-14 top-[62%] sm:top-[66%] lg:top-[70%] z-30 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 md:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
+            <div className="font-satoshi font-medium text-xs sm:text-sm md:text-[16px] leading-[120%] align-middle">
               Happy Students
             </div>
-            <div className="flex items-center gap-1 text-[10px] sm:text-xs font-semibold text-slate-700 my-1">
-              <span className="font-satoshi font-normal text-[12px] leading-[160%]">
+            <div className="flex items-center gap-1 text-[10px] sm:text-xs font-semibold text-slate-700 my-0.5 sm:my-1">
+              <span className="font-satoshi font-normal text-[10px] sm:text-[12px] leading-[160%]">
                 4.5 (240)
               </span>
               <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#FFB800] text-[#FFB800]" />
             </div>
-            <div className="flex items-center -space-x-1.5 mt-1">
+            <div className="flex items-center -space-x-1 sm:-space-x-1.5 mt-1">
               {[
                 "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80",
                 "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80",
@@ -189,10 +189,10 @@ export function HeroSection() {
                   key={i}
                   src={src}
                   alt="Happy student"
-                  className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover ring-2 ring-white"
+                  className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full object-cover ring-2 ring-white"
                 />
               ))}
-              <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#D2FF00] text-[#0f172a] text-[9px] sm:text-[10px] font-bold flex items-center justify-center ring-2 ring-white">
+              <span className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#D2FF00] text-[#0f172a] text-[8px] sm:text-[9px] md:text-[10px] font-bold flex items-center justify-center ring-2 ring-white">
                 2K+
               </span>
             </div>
@@ -202,3 +202,4 @@ export function HeroSection() {
     </section>
   );
 }
+
