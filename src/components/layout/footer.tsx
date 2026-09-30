@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Footer() {
   const [email, setEmail] = React.useState("");
@@ -23,13 +24,18 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16">
           {/* Brand & Newsletter Section */}
           <div className="lg:col-span-5 space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-[#D2FF00] flex items-center justify-center shadow-xs">
-                <div className="w-3 h-3 bg-[#0047FF] rounded-xs rotate-45 transform" />
-              </div>
-              <span className="font-bold text-xl tracking-tight text-slate-900 font-sans">
-                Byte<span className="text-[#0047FF]">Space</span>
-              </span>
+            <Link
+              href="/"
+              className="flex items-center group transition-transform active:scale-95 shrink-0"
+            >
+              <Image
+                src="/images/logo2.png"
+                alt="ByteSpace"
+                width={140}
+                height={36}
+                priority
+                className="h-7 sm:h-8 w-auto object-contain"
+              />
             </Link>
 
             <p className="text-xs text-slate-500 max-w-sm leading-relaxed">

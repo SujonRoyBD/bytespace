@@ -2,8 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Star, BarChart3, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AuthVisualCollage } from "@/components/auth/auth-visual-collage";
 
 export default function LoginPage() {
   const [email, setEmail] = React.useState("designer@example.com");
@@ -16,147 +16,32 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen w-full blueprint-grid flex items-center justify-center p-4 sm:p-6 lg:p-12 relative overflow-hidden">
-      {/* Decorative 3D yellow & lime shapes */}
-      <div className="absolute top-12 left-1/3 w-16 h-16 rounded-full border-[10px] border-[#D2FF00] rotate-45 pointer-events-none opacity-80" />
-      <div className="absolute bottom-20 left-12 w-20 h-20 bg-[#D2FF00] rotate-12 rounded-2xl pointer-events-none opacity-80 blur-xs" />
-      <div className="absolute top-1/4 right-10 w-14 h-14 bg-white/10 rounded-full pointer-events-none" />
-
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
-        {/* Left Side: Brand Text & Visual Floating Course Collage */}
-        <div className="lg:col-span-6 text-white space-y-6">
-          <Link href="/" className="inline-flex items-center gap-2 group mb-2">
-            <div className="w-8 h-8 rounded-xl bg-[#D2FF00] flex items-center justify-center shadow-md">
-              <div className="w-3.5 h-3.5 bg-[#0047FF] rounded-xs rotate-45" />
-            </div>
-            <span className="font-bold text-2xl tracking-tight text-white font-sans">
-              Byte<span className="text-[#D2FF00]">Space</span>
-            </span>
-          </Link>
-
-          <div className="space-y-2 max-w-md">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Sign in with ease
-            </h2>
-            <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed">
-              Experience a seamless and efficient sign-in process that grants
-              you instant access to a world of knowledge.
-            </p>
-          </div>
-
-          {/* Floating Course Collage (Matching Figma Mockup) */}
-          <div className="relative pt-6 max-w-md hidden sm:block">
-            {/* Background Course Card */}
-            <div className="absolute -left-4 top-12 w-64 bg-white rounded-2xl p-2.5 shadow-xl border border-slate-100 rotate-[-deg] opacity-75 pointer-events-none h-[384px] w-[373px]">
-              <div className="h-24 bg-slate-200 rounded-xl overflow-hidden mb-2">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=80"
-                  alt="Course"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="font-bold text-[11px] text-slate-900">
-                Build Digital Asset
-              </p>
-              <p className="text-[9px] text-[#0047FF] font-bold mt-1">
-                $25 /lifetime
-              </p>
-            </div>
-
-            {/* Foreground Main Card */}
-            <div className="relative z-10 w-72 bg-white rounded-2xl p-3 shadow-2xl border border-slate-100 ml-8  w-[384px] h-[377px]">
-              <div className="relative aspect-16/10 rounded-xl overflow-hidden mb-2 bg-slate-900 w">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=80"
-                  alt="The Power of Big Data"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute bottom-1.5 left-1.5 right-1.5 flex justify-between text-[8px] text-white">
-                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">
-                    17 Lessons
-                  </span>
-                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">
-                    2 hours 16 mins
-                  </span>
-                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">
-                    59 Comments
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-1">
-                <div className="flex items-center justify-between">
-                  <h4 className="font-bold text-xs text-slate-900">
-                    the Power of Big Data
-                  </h4>
-                  <div className="flex items-center gap-0.5 text-[10px] font-bold text-slate-800">
-                    <span>4.5</span>
-                    <Star className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
-                  </div>
-                </div>
-                <p className="text-[10px] text-slate-400">
-                  by purepearl studio
-                </p>
-              </div>
-
-              <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
-                <div className="flex items-center gap-1">
-                  <span className="text-[9px] text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded-full">
-                    Beginner
-                  </span>
-                  <div className="flex -space-x-1">
-                    <span className="w-4 h-4 rounded-full bg-slate-300 ring-1 ring-white inline-block" />
-                    <span className="w-4 h-4 rounded-full bg-slate-400 ring-1 ring-white inline-block" />
-                    <span className="w-4 h-4 rounded-full bg-[#D2FF00] text-[#0f172a] text-[8px] font-bold flex items-center justify-center ring-1 ring-white">
-                      26+
-                    </span>
-                  </div>
-                </div>
-                <span className="text-xs font-bold text-[#0047FF]">
-                  $25
-                  <span className="text-[9px] text-slate-400 font-normal">
-                    /lifetime
-                  </span>
-                </span>
-              </div>
-            </div>
-
-            {/* Happy Students Lime Widget */}
-            <div className="absolute -bottom-6 left-28 z-20 bg-[#D2FF00] rounded-2xl p-3 shadow-xl text-[#0f172a] space-y-1">
-              <div className="text-[10px] font-bold">Happy Students</div>
-              <div className="flex items-center gap-1 text-[9px] font-semibold">
-                <span>4.5 (240)</span>
-                <Star className="w-2.5 h-2.5 fill-current" />
-              </div>
-              <div className="flex -space-x-1.5 pt-0.5">
-                {[1, 2, 3, 4].map((i) => (
-                  <span
-                    key={i}
-                    className="w-5 h-5 rounded-full bg-slate-800 ring-1 ring-white inline-block"
-                  />
-                ))}
-                <span className="h-5 px-1 rounded-full bg-[#0047FF] text-white text-[9px] font-bold flex items-center justify-center ring-1 ring-white">
-                  2K+
-                </span>
-              </div>
-            </div>
-          </div>
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center relative z-10">
+        {/* Left Side: Brand Logo, Text & Visual 3D Course Collage */}
+        <div className="lg:col-span-6">
+          <AuthVisualCollage
+            title="Sign in with ease"
+            description="Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge."
+          />
         </div>
 
         {/* Right Side: Auth Form Card */}
-        <div className="lg:col-span-6 max-w-md w-full mx-auto">
-          <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-100 relative">
-            <div className="mb-6">
-              <span className="text-xs font-semibold text-[#0047FF]">
+        <div className="lg:col-span-6 max-w-lg w-full mx-auto">
+          <div className="bg-white rounded-[32px] sm:rounded-[36px] p-8 sm:p-12 md:p-14 shadow-2xl border border-slate-100 relative">
+            {/* Tag & Heading */}
+            <div className="mb-7">
+              <span className="text-xs sm:text-sm font-semibold text-[#0047FF]">
                 Sign In
               </span>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-1.5 font-sans">
                 Welcome Back
               </h1>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-2">
                   Email
                 </label>
                 <input
@@ -165,12 +50,12 @@ export default function LoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                   placeholder="designer@example.com"
-                  className="w-full h-11 px-4 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF] text-slate-900 placeholder:text-slate-400"
+                  className="w-full h-12 px-4 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]/20 focus:border-[#0047FF] text-slate-900 placeholder:text-slate-400 transition-all bg-white"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+                <label className="block text-xs sm:text-sm font-medium text-slate-700 mb-2">
                   Password
                 </label>
                 <input
@@ -178,16 +63,16 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="••••••••"
-                  className="w-full h-11 px-4 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF] text-slate-900 placeholder:text-slate-400"
+                  placeholder="********"
+                  className="w-full h-12 px-4 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#0047FF]/20 focus:border-[#0047FF] text-slate-900 placeholder:text-slate-400 transition-all bg-white"
                 />
               </div>
 
-              <div className="flex justify-end pt-1">
+              <div className="flex justify-end pt-2">
                 <Button
                   type="submit"
                   variant="lime"
-                  className="px-8 py-2.5 rounded-full text-xs font-bold shadow-md hover:scale-105 transition-transform"
+                  className="px-8 py-3 rounded-full text-xs sm:text-sm font-bold shadow-md hover:scale-105 transition-all cursor-pointer"
                 >
                   Sign In
                 </Button>
@@ -195,11 +80,11 @@ export default function LoginPage() {
             </form>
 
             {/* OR separator */}
-            <div className="relative my-8 text-center">
+            <div className="relative my-9 text-center">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-slate-200" />
               </div>
-              <span className="relative px-4 bg-white text-xs text-slate-400">
+              <span className="relative px-4 bg-white text-xs text-slate-400 font-medium">
                 or
               </span>
             </div>
@@ -208,8 +93,8 @@ export default function LoginPage() {
             <div className="flex items-center justify-center gap-4">
               <button
                 type="button"
-                onClick={() => alert("Facebook login")}
-                className="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-colors cursor-pointer"
+                onClick={() => alert("Sign in with Facebook")}
+                className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-900 hover:bg-slate-50 hover:border-slate-300 transition-all cursor-pointer shadow-sm active:scale-95"
                 aria-label="Sign in with Facebook"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -219,8 +104,8 @@ export default function LoginPage() {
 
               <button
                 type="button"
-                onClick={() => alert("Google login")}
-                className="w-11 h-11 rounded-full border border-slate-200 flex items-center justify-center text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-colors cursor-pointer"
+                onClick={() => alert("Sign in with Google")}
+                className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center text-slate-900 hover:bg-slate-50 hover:border-slate-300 transition-all cursor-pointer shadow-sm active:scale-95"
                 aria-label="Sign in with Google"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -244,7 +129,8 @@ export default function LoginPage() {
               </button>
             </div>
 
-            <div className="mt-8 text-center text-xs text-slate-500">
+            {/* Footer link */}
+            <div className="mt-8 text-center text-xs sm:text-sm text-slate-600">
               New user?{" "}
               <Link
                 href="/register"

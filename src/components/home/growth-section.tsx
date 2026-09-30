@@ -70,7 +70,7 @@ export function GrowthSection() {
               {/* Course Thumbnail */}
               <div className="relative w-full h-28 xs:h-36 sm:h-44 rounded-xl sm:rounded-2xl overflow-hidden bg-slate-100 mb-2 sm:mb-3">
                 <img
-                  src="https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=600&auto=format&fit=crop&q=80"
+                  src="/images/course1.jpg"
                   alt="Learn Figma from Basic"
                   className="w-full h-full object-cover"
                 />
@@ -139,7 +139,7 @@ export function GrowthSection() {
             </div>
 
             {/* Layer 3: Floating Learning Progress Card */}
-            <div className="absolute right-0 sm:right-2 lg:right-4 top-2 sm:top-6 lg:top-10 z-30 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 lg:p-5 shadow-2xl border border-slate-100 text-left w-32 xs:w-40 sm:w-48 lg:w-52">
+            <div className="absolute right-0 sm:right-2 lg:right-4 top-22 sm:top-6 lg:top-45 z-30 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 lg:p-5 shadow-2xl border border-slate-100 text-left w-32 xs:w-40 sm:w-48 lg:w-52">
               <div className="text-[10px] sm:text-xs font-semibold text-slate-500">
                 Learning Progress
               </div>

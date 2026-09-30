@@ -47,7 +47,7 @@ export default function CreatorProfilePage() {
   return (
     <div className="min-h-screen bg-slate-50/50 pb-20">
       {/* Blueprint Creator Hero */}
-      <CreatorHero creator={creator} />
+      {/* <CreatorHero creator={creator} /> */}
 
       {/* Creator Course Catalog Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 space-y-8">
