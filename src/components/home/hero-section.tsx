@@ -131,7 +131,7 @@ export function HeroSection() {
           <div className="absolute w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full  blur-3xl pointer-events-none scale-105" />
 
           {/* Perfectly Proportioned Lime Green Circle */}
-          <div className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full bg-[#D2FF00] overflow-hidden top-50 flex items-end justify-center  ring-4 ring-white/10 shrink-0">
+          <div className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full bg-[#D2FF00] overflow-hidden top-30 flex items-end justify-center  ring-4 ring-white/10 shrink-0">
             {/* Student Image */}
             {/* <Image
               src="/images/student.jpg"
@@ -155,10 +155,10 @@ export function HeroSection() {
 
           {/* Floating Card 2: Learning Progress 55% (Right) */}
           <div className="absolute -right-2 sm:-right-8 lg:-right-14 top-[20%] sm:top-[22%] z-30 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-40 sm:w-48 animate-in fade-in zoom-in duration-500">
-            <div className="text-[10px] sm:text-xs font-semibold text-slate-500">
+            <div className="font-satoshi font-medium text-[14px] leading-[120%] align-middle">
               Learning Progress
             </div>
-            <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 my-1 leading-none tracking-tight">
+            <div className=" font-semibold text-[48px] leading-[120%] tracking-[-1%] align-middle">
               55%
             </div>
             <div className="w-full h-2 sm:h-2.5 bg-slate-100 rounded-full overflow-hidden mt-1.5">
@@ -168,11 +168,13 @@ export function HeroSection() {
 
           {/* Floating Card 3: Happy Students (Bottom Left) */}
           <div className="absolute -left-2 sm:-left-8 lg:-left-14  z-30 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
-            <div className="text-xs sm:text-sm font-bold text-slate-900">
+            <div className="font-satoshi font-medium text-[16px] leading-[120%] align-middle">
               Happy Students
             </div>
             <div className="flex items-center gap-1 text-[10px] sm:text-xs font-semibold text-slate-700 my-1">
-              <span>4.5 (240)</span>
+              <span className="font-satoshi font-normal text-[12px] leading-[160%]">
+                4.5 (240)
+              </span>
               <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#FFB800] text-[#FFB800]" />
             </div>
             <div className="flex items-center -space-x-1.5 mt-1">

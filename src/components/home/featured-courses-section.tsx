@@ -17,15 +17,15 @@ export function FeaturedCoursesSection() {
     "Social Media",
     "UI/UX Design",
     "Creative Marketing",
-    "Project & Products",
-    "Web Front-End",
-    "Health",
-    "Personal & Career Development",
-    "Financial Concept",
+    "Digital Illustration",
+    "Film & Video",
+    "Crafts",
+    "Freelance & Entrepreneurship",
+    "Graphic Design",
     "Photography",
-    "Free Availability",
-    "Data Development",
-    "Basic Python",
+    "Productivity",
+    "Web Development",
+    "Data Science",
     "Cooking",
     "+ More",
   ];
@@ -36,36 +36,51 @@ export function FeaturedCoursesSection() {
       return coursesData.slice(0, 6);
     }
     const matches = coursesData.filter(
-      (c) => c.category.toLowerCase() === activeCategory.toLowerCase()
+      (c) => c.category.toLowerCase() === activeCategory.toLowerCase(),
     );
     return matches.length > 0 ? matches : coursesData.slice(0, 6);
   }, [activeCategory]);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-8">
-      <div className="text-center max-w-2xl mx-auto space-y-2">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight font-sans">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-10">
+      <div className="text-center max-w-3xl mx-auto space-y-3">
+        <h2 className="font-semibold text-3xl sm:text-4xl md:text-[44px] leading-[120%] tracking-tight text-slate-900 text-center">
           Discover Your Passion, <br />
           Build Your Skills
         </h2>
-        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
-          Explore our 10+ categories and courses. Choose your path and enhance your skills.
+        <p className="font-satoshi font-normal text-sm sm:text-base md:text-[18px] leading-[160%] text-slate-600 text-center max-w-2xl mx-auto">
+          At Bytespace Courses, we bring you closer to life-changing knowledge.
+          Explore a variety of courses across different fields, from technology
+          to the arts, and make a difference in your career and life.
         </p>
       </div>
 
       {/* Category Pills List */}
-      <div className="flex flex-wrap items-center justify-center gap-2 max-w-4xl mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-2.5 max-w-5xl mx-auto px-2">
         {categoryPillsList.map((cat) => {
           const isSelected = activeCategory.toLowerCase() === cat.toLowerCase();
+
+          if (cat === "+ More") {
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className="px-3.5 py-2 text-xs sm:text-sm font-bold text-[#0047FF] hover:underline transition-all cursor-pointer font-satoshi"
+              >
+                + More
+              </button>
+            );
+          }
+
           return (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={cn(
-                "px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer",
+                "px-4 py-2 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm transition-all cursor-pointer font-satoshi whitespace-nowrap",
                 isSelected
-                  ? "bg-[#D2FF00] text-[#0f172a] shadow-xs"
-                  : "bg-slate-100 hover:bg-slate-200 text-slate-600"
+                  ? "bg-[#D4FB20] text-slate-950 font-bold shadow-xs"
+                  : "bg-[#F3F4F6] hover:bg-slate-200/80 text-slate-700 font-medium",
               )}
             >
               {cat}
