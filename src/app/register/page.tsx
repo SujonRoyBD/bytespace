@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { AuthVisualCollage } from "@/components/auth/auth-visual-collage";
+import { AuthVisualCollage, AuthTopLogo } from "@/components/auth/auth-visual-collage";
 
 export default function RegisterPage() {
   const [fullName, setFullName] = React.useState("");
@@ -17,7 +17,10 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen w-full blueprint-grid flex items-center justify-center p-4 sm:p-6 lg:p-12 relative overflow-hidden">
-      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center relative z-10">
+      {/* Top Left Brand Logo 'b' Icon */}
+      <AuthTopLogo />
+
+      <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start relative z-10 pt-24 sm:pt-24 lg:pt-24 pb-12">
         {/* Left Side: Brand Logo, Text & Visual 3D Course Collage */}
         <div className="lg:col-span-6">
           <AuthVisualCollage

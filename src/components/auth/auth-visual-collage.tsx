@@ -16,6 +16,29 @@ const studentAvatars = [
   "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=120&auto=format&fit=crop&q=80",
 ];
 
+export function AuthTopLogo() {
+  return (
+    <div className="absolute top-6 left-6 sm:top-8 sm:left-10 lg:top-10 lg:left-14 z-30">
+      <Link
+        href="/"
+        className="inline-block hover:opacity-90 transition-opacity"
+        aria-label="ByteSpace Home"
+      >
+        <div className="w-10 h-10 overflow-hidden flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="ByteSpace"
+            width={140}
+            height={36}
+            priority
+            className="h-9 w-auto max-w-none object-cover object-left"
+          />
+        </div>
+      </Link>
+    </div>
+  );
+}
+
 export function AuthVisualCollage({ title, description }: AuthVisualCollageProps) {
   return (
     <div className="w-full text-white space-y-6 lg:space-y-8">
@@ -34,26 +57,6 @@ export function AuthVisualCollage({ title, description }: AuthVisualCollageProps
           </filter>
         </defs>
       </svg>
-
-      {/* Top Logo (Lime 'b' icon) */}
-      <div>
-        <Link
-          href="/"
-          className="inline-block hover:opacity-90 transition-opacity"
-          aria-label="ByteSpace Home"
-        >
-          <div className="w-9 h-9 overflow-hidden flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="ByteSpace"
-              width={140}
-              height={36}
-              priority
-              className="h-8 w-auto max-w-none object-cover object-left"
-            />
-          </div>
-        </Link>
-      </div>
 
       {/* Heading & Subtitle */}
       <div className="space-y-2.5 max-w-md">

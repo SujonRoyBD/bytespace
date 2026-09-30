@@ -13,6 +13,11 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const cartCount = 1;
 
+  // Do not render Header on login or register/signup pages
+  if (pathname === "/login" || pathname === "/register" || pathname === "/signup") {
+    return null;
+  }
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Courses", href: "/courses" },

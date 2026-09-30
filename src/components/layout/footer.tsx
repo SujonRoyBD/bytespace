@@ -2,12 +2,19 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export function Footer() {
+  const pathname = usePathname();
   const [email, setEmail] = React.useState("");
   const [subscribed, setSubscribed] = React.useState(false);
+
+  // Do not render Footer on login or register/signup pages
+  if (pathname === "/login" || pathname === "/register" || pathname === "/signup") {
+    return null;
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
