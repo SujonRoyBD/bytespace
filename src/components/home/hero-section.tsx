@@ -131,17 +131,17 @@ export function HeroSection() {
       {/* CENTERPIECE SHOWCASE (Lime Circle + Student Image + Floating Cards) */}
       <div className="relative w-full max-w-5xl mx-auto mt-8 sm:mt-12 flex items-end justify-center z-10 min-h-[340px] xs:min-h-[400px] sm:min-h-[500px] lg:min-h-[580px] overflow-visible">
         {/* Giant Lime Green Circle Background */}
-        <div className="absolute bottom-0 w-[280px] h-[280px] xs:w-[340px] xs:h-[340px] sm:w-[540px] sm:h-[540px] md:w-[680px] md:h-[680px] lg:w-[840px] lg:h-[840px] rounded-full bg-[#D2FF00] z-0 translate-y-[35%] sm:translate-y-[40%]" />
+        <div className="absolute bottom-0 w-[280px] h-[280px] xs:w-[340px] xs:h-[340px] sm:w-[540px] sm:h-[540px] md:w-[680px] md:h-[680px] lg:w-[840px] lg:h-[840px] rounded-full bg-[#D2FF00] z-0 translate-y-[35%] sm:translate-y-[50%]" />
 
         {/* Student Image Cutout */}
         <div className="relative z-10 w-[260px] xs:w-[320px] sm:w-[460px] md:w-[540px] lg:w-[620px] h-auto flex items-end justify-center pointer-events-none select-none">
           <Image
-            src="/images/student.jpg"
+            src="/images/profetional-groth.png"
             alt="ByteSpace Student"
             width={640}
             height={640}
             priority
-            className="w-full h-auto object-contain drop-shadow-2xl"
+            className="w-full h-auto object-contain drop-shadow-2xl `"
           />
         </div>
 
@@ -203,4 +203,3 @@ export function HeroSection() {
     </section>
   );
 }
-
