@@ -38,49 +38,64 @@ export default function LoginPage() {
               Sign in with ease
             </h2>
             <p className="text-xs sm:text-sm text-blue-100/90 leading-relaxed">
-              Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.
+              Experience a seamless and efficient sign-in process that grants
+              you instant access to a world of knowledge.
             </p>
           </div>
 
           {/* Floating Course Collage (Matching Figma Mockup) */}
           <div className="relative pt-6 max-w-md hidden sm:block">
             {/* Background Course Card */}
-            <div className="absolute -left-4 top-12 w-64 bg-white rounded-2xl p-2.5 shadow-xl border border-slate-100 rotate-[-6deg] opacity-75 pointer-events-none">
+            <div className="absolute -left-4 top-12 w-64 bg-white rounded-2xl p-2.5 shadow-xl border border-slate-100 rotate-[-deg] opacity-75 pointer-events-none h-[384px] w-[373px]">
               <div className="h-24 bg-slate-200 rounded-xl overflow-hidden mb-2">
                 <img
-                  src="https://images.unsplash.com/photo-1581291518655-9523c932edcf?w=400&auto=format&fit=crop&q=80"
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=80"
                   alt="Course"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="font-bold text-[11px] text-slate-900">Build Digital Asset</p>
-              <p className="text-[9px] text-[#0047FF] font-bold mt-1">$25 /lifetime</p>
+              <p className="font-bold text-[11px] text-slate-900">
+                Build Digital Asset
+              </p>
+              <p className="text-[9px] text-[#0047FF] font-bold mt-1">
+                $25 /lifetime
+              </p>
             </div>
 
             {/* Foreground Main Card */}
-            <div className="relative z-10 w-72 bg-white rounded-2xl p-3 shadow-2xl border border-slate-100 ml-8 rotate-[2deg]">
-              <div className="relative aspect-16/10 rounded-xl overflow-hidden mb-2 bg-slate-900">
+            <div className="relative z-10 w-72 bg-white rounded-2xl p-3 shadow-2xl border border-slate-100 ml-8  w-[384px] h-[377px]">
+              <div className="relative aspect-16/10 rounded-xl overflow-hidden mb-2 bg-slate-900 w">
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=80"
                   alt="The Power of Big Data"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-1.5 left-1.5 right-1.5 flex justify-between text-[8px] text-white">
-                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">17 Lessons</span>
-                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">2 hours 16 mins</span>
-                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">59 Comments</span>
+                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">
+                    17 Lessons
+                  </span>
+                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">
+                    2 hours 16 mins
+                  </span>
+                  <span className="bg-black/60 px-1.5 py-0.5 rounded-full">
+                    59 Comments
+                  </span>
                 </div>
               </div>
 
               <div className="space-y-1">
                 <div className="flex items-center justify-between">
-                  <h4 className="font-bold text-xs text-slate-900">the Power of Big Data</h4>
+                  <h4 className="font-bold text-xs text-slate-900">
+                    the Power of Big Data
+                  </h4>
                   <div className="flex items-center gap-0.5 text-[10px] font-bold text-slate-800">
                     <span>4.5</span>
                     <Star className="w-2.5 h-2.5 fill-amber-400 text-amber-400" />
                   </div>
                 </div>
-                <p className="text-[10px] text-slate-400">by purepearl studio</p>
+                <p className="text-[10px] text-slate-400">
+                  by purepearl studio
+                </p>
               </div>
 
               <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between">
@@ -96,7 +111,12 @@ export default function LoginPage() {
                     </span>
                   </div>
                 </div>
-                <span className="text-xs font-bold text-[#0047FF]">$25<span className="text-[9px] text-slate-400 font-normal">/lifetime</span></span>
+                <span className="text-xs font-bold text-[#0047FF]">
+                  $25
+                  <span className="text-[9px] text-slate-400 font-normal">
+                    /lifetime
+                  </span>
+                </span>
               </div>
             </div>
 
@@ -126,7 +146,9 @@ export default function LoginPage() {
         <div className="lg:col-span-6 max-w-md w-full mx-auto">
           <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-2xl border border-slate-100 relative">
             <div className="mb-6">
-              <span className="text-xs font-semibold text-[#0047FF]">Sign In</span>
+              <span className="text-xs font-semibold text-[#0047FF]">
+                Sign In
+              </span>
               <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-1">
                 Welcome Back
               </h1>
@@ -177,7 +199,9 @@ export default function LoginPage() {
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-slate-200" />
               </div>
-              <span className="relative px-4 bg-white text-xs text-slate-400">or</span>
+              <span className="relative px-4 bg-white text-xs text-slate-400">
+                or
+              </span>
             </div>
 
             {/* Social Logins */}

@@ -1,6 +1,24 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,800,700,600,500,400,300&display=swap');
 @import "tailwindcss";
 
+/* Satoshi Direct Font-Face Definitions */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/NHPGVFYUXYXE33DZ75OIT4JFGHITX5PE/PSUTMASCDJTVPERDYJZPN23BVUFUCQIF/J64QX5IPOHK56I2KYUNBQ5M2XWZEYKYX.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  --font-sans: var(--font-poppins), 'Poppins', sans-serif;
+  --font-poppins: var(--font-poppins), 'Poppins', sans-serif;
+  --font-satoshi: 'Satoshi', 'Poppins', sans-serif;
+  --font-primary: var(--font-poppins), 'Poppins', sans-serif;
+  --font-secondary: 'Satoshi', 'Poppins', sans-serif;
+}
+
 @layer base {
   :root {
     --brand-blue: #0047ff;
@@ -17,15 +35,26 @@
   body {
     color: #1e293b;
     background-color: #ffffff;
-    font-family: var(--font-poppins), 'Satoshi', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-poppins), 'Poppins', system-ui, -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-poppins), 'Satoshi', sans-serif;
+    font-family: var(--font-poppins), 'Poppins', sans-serif;
     letter-spacing: -0.02em;
   }
+}
+
+/* Custom Font Helper Utilities */
+.font-primary,
+.font-poppins {
+  font-family: var(--font-poppins), 'Poppins', sans-serif !important;
+}
+
+.font-secondary,
+.font-satoshi {
+  font-family: 'Satoshi', var(--font-poppins), sans-serif !important;
 }
 
 /* Custom Electric Blueprint Grid Pattern */

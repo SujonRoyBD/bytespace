@@ -15,11 +15,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="w-full blueprint-grid text-white pt-10 sm:pt-14 pb-20 sm:pb-28 relative overflow-hidden">
-      {/* ======================================================== */}
-      {/* 3D FLOATING SHAPES (Small images with absolute positioning) */}
-      {/* ======================================================== */}
-
+    <section className="w-full h-[900px] blueprint-grid text-white pt-10 sm:pt-14 pb-16 sm:pb-24 lg:pb-28 relative overflow-hidden">
       {/* 1. Yellow Pitch (Top-Left Lime Spiral) */}
       <div className="absolute top-4 sm:top-8 left-2 sm:left-6 lg:left-12 w-24 sm:w-36 lg:w-48 pointer-events-none select-none z-10 animate-float-slow">
         <Image
@@ -45,7 +41,7 @@ export function HeroSection() {
       </div>
 
       {/* 3. Rounded Torus Ring (Bottom-Left Donut) */}
-      <div className="absolute -bottom-4 sm:bottom-0 left-2 sm:left-8 lg:left-16 w-36 sm:w-52 lg:w-64 pointer-events-none select-none z-20 animate-float-slow">
+      <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-6 lg:left-12 w-28 sm:w-44 lg:w-56 pointer-events-none select-none z-20 animate-float-slow">
         <Image
           src="/images/rounded.png"
           alt="3D Rounded Torus"
@@ -81,7 +77,7 @@ export function HeroSection() {
       </div>
 
       {/* 6. White Pitch (Bottom-Right White Squiggle) */}
-      <div className="absolute -bottom-2 sm:bottom-4 right-4 sm:right-12 lg:right-20 w-24 sm:w-32 lg:w-44 pointer-events-none select-none z-10 animate-float-reverse">
+      <div className="absolute bottom-4 sm:bottom-6 right-4 sm:right-10 lg:right-16 w-20 sm:w-28 lg:w-36 pointer-events-none select-none z-10 animate-float-reverse">
         <Image
           src="/images/whitepitch.png"
           alt="3D White Pitch"
@@ -92,28 +88,23 @@ export function HeroSection() {
         />
       </div>
 
-      {/* ======================================================== */}
       {/* MAIN HERO CONTENT */}
-      {/* ======================================================== */}
+
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5 sm:space-y-6">
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-6xl md:text-[68px] font-extrabold tracking-tight text-white leading-[1.08] max-w-4xl mx-auto font-sans">
+        <h1 className=" font-semibold text-[72px] leading-[120%] tracking-[-1%] text-center max-w-4xl mx-auto">
           Get Access to Hundreds <br />
           Courses Available
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xs sm:text-sm md:text-[15px] text-white/85 max-w-2xl mx-auto font-normal leading-relaxed">
-          Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
+        <p className="font-satoshi font-normal text-[18px] leading-[160%] tracking-[0%] text-center">
+          Unlock your creativity, gain valuable knowledge, and grow your
+          business with our wide range of courses.
         </p>
 
-<<<<<<< HEAD
-        {/* Pill Search Input */}
-        <div className="max-w-xl mx-auto pt-2 pb-4">
-=======
         {/* Search Bar Pill Container */}
         <div className="max-w-xl mx-auto pt-2 pb-2">
->>>>>>> 2c29e9651d82076d185657582029b8d87453104a
           <form
             onSubmit={handleSearch}
             className="relative flex items-center bg-white rounded-full p-1.5 pl-4 sm:pl-5 shadow-2xl transition-all focus-within:ring-2 focus-within:ring-[#D2FF00]/50"
@@ -135,67 +126,37 @@ export function HeroSection() {
           </form>
         </div>
 
-<<<<<<< HEAD
-        {/* Hero Person Visual Centerpiece with Lime Backdrop & Floating Widgets */}
-        <div className="relative max-w-xl mx-auto mt-6 flex items-center justify-center">
-          {/* Bright Lime Circle Backdrop */}
-          <div className="w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#D2FF00] absolute -bottom-8 z-0 shadow-2xl shadow-lime-500/20" />
-
-          {/* Person Image */}
-          <div className="relative z-10 w-64 sm:w-80 overflow-hidden pt-4">
-            <img
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&auto=format&fit=crop&q=80"
-              alt="Student learner with laptop"
-              className="w-full h-auto object-contain drop-shadow-2xl rounded-2xl"
-            />
-          </div>
-
-          {/* Floating Widget 1: Top-Left (100+ Design Courses) */}
-          <div className="absolute -left-2 sm:-left-12 top-6 z-20 bg-white rounded-2xl p-2.5 sm:p-3 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
-            <div className="text-[11px] font-bold">100+ Design Courses</div>
-            <div className="flex items-center gap-1 text-[10px] text-slate-600 font-semibold mt-0.5">
-              <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-              <span>4.9 (12k+)</span>
-            </div>
-          </div>
-
-          {/* Floating Widget 2: Top-Right (Learning Progress 55%) */}
-          <div className="absolute -right-2 sm:-right-12 top-10 z-20 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left w-36 sm:w-44 animate-in fade-in zoom-in duration-500">
-            <div className="flex items-center justify-between text-[10px] font-semibold text-slate-500">
-              <span>Learning Progress</span>
-=======
-        {/* ======================================================== */}
-        {/* CENTERPIECE: Lime Circle + Student Cutout + 3 Float Cards */}
-        {/* ======================================================== */}
         <div className="relative max-w-lg sm:max-w-xl mx-auto mt-6 sm:mt-10 flex items-center justify-center">
-          {/* Giant Lime Green Circle */}
-          <div className="relative w-[320px] h-[320px] sm:w-[460px] sm:h-[460px] lg:w-[520px] lg:h-[520px] rounded-full bg-[#D2FF00] overflow-hidden flex items-end justify-center shadow-2xl">
+          {/* Subtle Ambient Glow behind Circle */}
+          <div className="absolute w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full  blur-3xl pointer-events-none scale-105" />
+
+          {/* Perfectly Proportioned Lime Green Circle */}
+          <div className="relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[860px] lg:h-[860px] rounded-full bg-[#D2FF00] overflow-hidden top-50 flex items-end justify-center  ring-4 ring-white/10 shrink-0">
             {/* Student Image */}
-            <Image
+            {/* <Image
               src="/images/student.jpg"
               alt="ByteSpace student learning online"
               width={540}
               height={540}
               priority
               className="w-full h-full object-cover object-top select-none pointer-events-none"
-            />
+            /> */}
           </div>
 
           {/* Floating Card 1: UI/UX Design (Left) */}
-          <div className="absolute -left-2 sm:-left-12 lg:-left-20 top-[18%] sm:top-[20%] z-30 bg-white rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
-            <div className="text-xs sm:text-sm font-bold text-slate-900">
+          <div className="absolute -left-2 sm:-left-10 lg:-left-16 top-[18%] sm:top-[20%] z-30 bg-white rounded-2xl px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
+            <div className="font-satoshi font-medium text-[16px] leading-[120%] align-middle">
               UI/UX Design
             </div>
-            <div className="text-[10px] sm:text-xs text-slate-500 font-medium mt-0.5 whitespace-nowrap">
+            <div className="font-satoshi font-normal text-[12px] leading-[160%] mt-0.5 whitespace-nowrap">
               200 Courses &nbsp;•&nbsp; 1000+ Students
             </div>
           </div>
 
           {/* Floating Card 2: Learning Progress 55% (Right) */}
-          <div className="absolute -right-2 sm:-right-10 lg:-right-16 top-[20%] sm:top-[22%] z-30 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-40 sm:w-48 animate-in fade-in zoom-in duration-500">
+          <div className="absolute -right-2 sm:-right-8 lg:-right-14 top-[20%] sm:top-[22%] z-30 bg-white rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-40 sm:w-48 animate-in fade-in zoom-in duration-500">
             <div className="text-[10px] sm:text-xs font-semibold text-slate-500">
               Learning Progress
->>>>>>> 2c29e9651d82076d185657582029b8d87453104a
             </div>
             <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 my-1 leading-none tracking-tight">
               55%
@@ -206,7 +167,7 @@ export function HeroSection() {
           </div>
 
           {/* Floating Card 3: Happy Students (Bottom Left) */}
-          <div className="absolute -left-2 sm:-left-10 lg:-left-16 bottom-[8%] sm:bottom-[10%] z-30 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
+          <div className="absolute -left-2 sm:-left-8 lg:-left-14  z-30 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
             <div className="text-xs sm:text-sm font-bold text-slate-900">
               Happy Students
             </div>
