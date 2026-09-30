@@ -134,14 +134,14 @@ export function HeroSection() {
         <div className="absolute bottom-0 w-[280px] h-[280px] xs:w-[340px] xs:h-[340px] sm:w-[540px] sm:h-[540px] md:w-[680px] md:h-[680px] lg:w-[840px] lg:h-[840px] rounded-full bg-[#D2FF00] z-0 translate-y-[35%] sm:translate-y-[50%]" />
 
         {/* Student Image Cutout */}
-        <div className="relative z-10 w-[260px] xs:w-[320px] sm:w-[460px] md:w-[540px] lg:w-[620px] h-auto flex items-end justify-center pointer-events-none select-none">
+        <div className="relative z-10 w-[260px] xs:w-[320px] sm:w-[460px] md:w-[540px] lg:w-[620px] h-auto flex items-end justify-center pointer-events-none select-none translate-y-8 sm:translate-y-16 lg:translate-y-33">
           <Image
             src="/images/profetional-groth.png"
             alt="ByteSpace Student"
             width={640}
             height={640}
             priority
-            className="w-full h-auto object-contain drop-shadow-2xl `"
+            className="w-full h-auto object-contain drop-shadow-2xl"
           />
         </div>
 
