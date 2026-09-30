@@ -19,7 +19,7 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#0047FF] border-b border-white/10 text-white transition-all shadow-xs">
+    <header className="sticky top-0 z-40 w-full blueprint-grid text-white transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -116,7 +116,7 @@ export function Header() {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#003be0] border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+        <div className="md:hidden blueprint-grid border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
           {navLinks.map((link) => (
             <Link
               key={link.name}

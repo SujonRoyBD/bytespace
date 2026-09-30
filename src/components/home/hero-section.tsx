@@ -16,29 +16,42 @@ export function HeroSection() {
   };
 
   return (
-    <section className="w-full blueprint-grid text-white pt-16 pb-24 sm:pb-32 relative overflow-hidden">
+    <section className="w-full blueprint-grid text-white pt-8 pb-20 sm:pb-28 relative overflow-hidden">
       {/* 3D Shapes & Squiggles Backdrop */}
-      <div className="absolute top-12 left-8 sm:left-16 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-[10px] sm:border-[14px] border-[#D2FF00] rotate-45 pointer-events-none opacity-90 shadow-2xl animate-pulse-subtle" />
-      <div className="absolute top-16 right-10 sm:right-24 w-12 h-16 sm:w-16 sm:h-20 bg-[#D2FF00] rounded-2xl rotate-12 pointer-events-none opacity-90 shadow-xl" />
+      {/* Yellow Torus (Donut) Top-Left */}
+      <div className="absolute top-10 left-6 sm:left-14 w-16 h-16 sm:w-20 sm:h-20 rounded-full border-[10px] sm:border-[14px] border-[#D2FF00] rotate-45 pointer-events-none opacity-90 shadow-2xl animate-pulse-subtle" />
+      
+      {/* Yellow Cylinder Top-Right */}
+      <div className="absolute top-12 right-8 sm:right-20 w-14 h-20 bg-[#D2FF00] rounded-2xl rotate-12 pointer-events-none opacity-90 shadow-xl" />
 
-      {/* White squiggles (SVG) */}
+      {/* Yellow Torus Bottom-Left */}
+      <div className="absolute bottom-16 left-8 sm:left-20 w-14 h-14 sm:w-18 sm:h-18 rounded-full border-[8px] sm:border-[12px] border-[#D2FF00] rotate-12 pointer-events-none opacity-90 shadow-xl" />
+
+      {/* Green/Lime Cone Bottom-Left */}
+      <div
+        className="absolute bottom-10 left-28 sm:left-40 w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-b-[45px] border-b-white rotate-[-20deg] pointer-events-none opacity-90 drop-shadow-xl"
+        style={{ filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.2))" }}
+      />
+
+      {/* White 3D Squiggles (SVG) Left */}
       <svg
-        className="absolute top-36 left-12 sm:left-28 w-16 h-12 text-white/80 pointer-events-none"
+        className="absolute top-36 left-8 sm:left-24 w-16 h-12 text-white pointer-events-none drop-shadow-md"
         viewBox="0 0 100 40"
         fill="none"
         stroke="currentColor"
-        strokeWidth="6"
+        strokeWidth="7"
         strokeLinecap="round"
       >
         <path d="M10 20 Q 25 5, 40 20 T 70 20 T 90 20" />
       </svg>
 
+      {/* White 3D Squiggles (SVG) Right */}
       <svg
-        className="absolute top-32 right-12 sm:right-32 w-16 h-12 text-white/80 pointer-events-none"
+        className="absolute top-36 right-8 sm:right-28 w-16 h-12 text-white pointer-events-none drop-shadow-md"
         viewBox="0 0 100 40"
         fill="none"
         stroke="currentColor"
-        strokeWidth="6"
+        strokeWidth="7"
         strokeLinecap="round"
       >
         <path d="M10 20 Q 25 5, 40 20 T 70 20 T 90 20" />
@@ -55,7 +68,7 @@ export function HeroSection() {
         </p>
 
         {/* Pill Search Input */}
-        <div className="max-w-xl mx-auto pt-2 pb-6">
+        <div className="max-w-xl mx-auto pt-2 pb-4">
           <form
             onSubmit={handleSearch}
             className="relative flex items-center bg-white rounded-full p-1.5 shadow-2xl border border-white/20"
@@ -82,7 +95,7 @@ export function HeroSection() {
         {/* Hero Person Visual Centerpiece with Lime Backdrop & Floating Widgets */}
         <div className="relative max-w-xl mx-auto mt-6 flex items-center justify-center">
           {/* Bright Lime Circle Backdrop */}
-          <div className="w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#D2FF00] absolute -bottom-10 z-0 shadow-2xl shadow-lime-500/20" />
+          <div className="w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-[#D2FF00] absolute -bottom-8 z-0 shadow-2xl shadow-lime-500/20" />
 
           {/* Person Image */}
           <div className="relative z-10 w-64 sm:w-80 overflow-hidden pt-4">
@@ -94,7 +107,7 @@ export function HeroSection() {
           </div>
 
           {/* Floating Widget 1: Top-Left (100+ Design Courses) */}
-          <div className="absolute -left-4 sm:-left-12 top-6 z-20 bg-white rounded-2xl p-2.5 sm:p-3 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
+          <div className="absolute -left-2 sm:-left-12 top-6 z-20 bg-white rounded-2xl p-2.5 sm:p-3 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
             <div className="text-[11px] font-bold">100+ Design Courses</div>
             <div className="flex items-center gap-1 text-[10px] text-slate-600 font-semibold mt-0.5">
               <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
@@ -103,7 +116,7 @@ export function HeroSection() {
           </div>
 
           {/* Floating Widget 2: Top-Right (Learning Progress 55%) */}
-          <div className="absolute -right-4 sm:-right-12 top-10 z-20 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left w-36 sm:w-44 animate-in fade-in zoom-in duration-500">
+          <div className="absolute -right-2 sm:-right-12 top-10 z-20 bg-white rounded-2xl p-3 sm:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left w-36 sm:w-44 animate-in fade-in zoom-in duration-500">
             <div className="flex items-center justify-between text-[10px] font-semibold text-slate-500">
               <span>Learning Progress</span>
             </div>
