@@ -48,7 +48,7 @@ export function HeroSection() {
           width={280}
           height={280}
           priority
-          className="w-full h-auto object-contain -rotate-6 drop-shadow-2xl"
+          className="w-full h-auto object-contain -rotate-6 drop-shadow-2xl hidden md:block"
         />
       </div>
 
@@ -128,25 +128,44 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* CENTERPIECE SHOWCASE (Lime Circle + Student Image + Floating Cards) */}
-      <div className="relative w-full max-w-5xl mx-auto mt-8 sm:mt-12 flex items-end justify-center z-10 min-h-[340px] xs:min-h-[400px] sm:min-h-[500px] lg:min-h-[580px] overflow-visible">
-        {/* Giant Lime Green Circle Background */}
-        <div className="absolute bottom-0 w-[280px] h-[280px] xs:w-[340px] xs:h-[340px] sm:w-[540px] sm:h-[540px] md:w-[680px] md:h-[680px] lg:w-[840px] lg:h-[840px] rounded-full bg-[#D2FF00] z-0 translate-y-[35%] sm:translate-y-[50%]" />
+      {/* CENTERPIECE SHOWCASE (Rounded Image + Student + Floating Cards) */}
+      <div className="relative w-full max-w-5xl mx-auto mt-8 sm:mt-12 flex items-end justify-center z-10 min-h-[380px] xs:min-h-[440px] sm:min-h-[540px] lg:min-h-[620px] overflow-visible">
+        {/* Rounded Image instead of CSS Circle */}
+        <div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 
+                  w-[380px] xs:w-[460px] sm:w-[680px] md:w-[860px] lg:w-[1050px]
+                  pointer-events-none select-none z-0
+                  translate-y-[10%] sm:translate-y-[1%]"
+        >
+          <Image
+            src="/images/rounded.png"
+            alt="Rounded Background"
+            width={1100}
+            height={1100}
+            priority
+            className="w-full h-auto object-contain drop-shadow-xl"
+          />
+        </div>
 
-        {/* Student Image Cutout */}
-        <div className="relative z-10 w-[260px] xs:w-[320px] sm:w-[460px] md:w-[540px] lg:w-[620px] h-auto flex items-end justify-center pointer-events-none select-none translate-y-8 sm:translate-y-16 lg:translate-y-33">
+        {/* Student Image */}
+        <div
+          className="relative z-10 
+          w-[260px] xs:w-[320px] sm:w-[460px] md:w-[540px] lg:w-[620px] 
+          h-auto flex items-end justify-center pointer-events-none select-none 
+          translate-y-16 sm:translate-y-28 lg:translate-y-32 translate-x-5"
+        >
           <Image
             src="/images/profetional-groth.png"
             alt="ByteSpace Student"
-            width={640}
-            height={640}
+            width={340}
+            height={340}
             priority
             className="w-full h-auto object-contain drop-shadow-2xl"
           />
         </div>
 
         {/* Floating Card 1: UI/UX Design (Left) */}
-        <div className="absolute left-1 xs:left-4 sm:left-10 lg:left-16 top-[20%] sm:top-[28%] lg:top-[32%] z-20 bg-white rounded-xl sm:rounded-2xl px-3 py-2.5 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
+        <div className="absolute left-1 xs:left-4 sm:left-10 lg:left-16 top-[18%] sm:top-[26%] lg:top-[30%] z-20 bg-white rounded-xl sm:rounded-2xl px-3 py-2.5 sm:px-5 sm:py-3.5 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-300">
           <div className="font-satoshi font-semibold text-xs sm:text-sm lg:text-[16px] leading-tight text-slate-900">
             UI/UX Design
           </div>
@@ -156,7 +175,7 @@ export function HeroSection() {
         </div>
 
         {/* Floating Card 2: Learning Progress 55% (Right) */}
-        <div className="absolute right-1 xs:right-4 sm:right-10 lg:right-16 top-[25%] sm:top-[30%] lg:top-[34%] z-20 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 lg:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-32 xs:w-40 sm:w-48 lg:w-56 animate-in fade-in zoom-in duration-500">
+        <div className="absolute right-1 xs:right-4 sm:right-10 lg:right-16 top-[22%] sm:top-[28%] lg:top-[32%] z-20 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 lg:p-5 shadow-2xl border border-slate-100 text-slate-900 text-left w-32 xs:w-40 sm:w-48 lg:w-56 animate-in fade-in zoom-in duration-500">
           <div className="font-satoshi font-medium text-[10px] sm:text-xs lg:text-sm text-slate-500">
             Learning Progress
           </div>
@@ -169,7 +188,7 @@ export function HeroSection() {
         </div>
 
         {/* Floating Card 3: Happy Students (Bottom Left) */}
-        <div className="absolute left-2 xs:left-6 sm:left-14 lg:left-24 bottom-[10%] sm:bottom-[14%] lg:bottom-[18%] z-20 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
+        <div className="absolute left-2 xs:left-6 sm:left-14 lg:left-24 bottom-[12%] sm:bottom-[16%] lg:bottom-[20%] z-20 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-2xl border border-slate-100 text-slate-900 text-left animate-in fade-in zoom-in duration-700">
           <div className="font-satoshi font-semibold text-xs sm:text-sm lg:text-[16px] leading-tight text-slate-900">
             Happy Students
           </div>
