@@ -27,14 +27,18 @@ export default function CoursesPage() {
           c.title.toLowerCase().includes(q) ||
           c.subtitle.toLowerCase().includes(q) ||
           c.category.toLowerCase().includes(q) ||
-          c.creator.name.toLowerCase().includes(q)
+          c.creator.name.toLowerCase().includes(q),
       );
     }
 
     // Category filter
-    if (selectedCategory && selectedCategory !== "Featured" && selectedCategory !== "All") {
+    if (
+      selectedCategory &&
+      selectedCategory !== "Featured" &&
+      selectedCategory !== "All"
+    ) {
       list = list.filter(
-        (c) => c.category.toLowerCase() === selectedCategory.toLowerCase()
+        (c) => c.category.toLowerCase() === selectedCategory.toLowerCase(),
       );
     }
 
@@ -56,7 +60,13 @@ export default function CoursesPage() {
   }, [searchQuery, selectedCategory, selectedLevel, sortBy]);
 
   // For a rich 12-card grid display, repeat / paginate smoothly
-  const totalCards = filteredCourses.length >= 12 ? filteredCourses : [...filteredCourses, ...coursesData.slice(0, 12 - filteredCourses.length)];
+  const totalCards =
+    filteredCourses.length >= 12
+      ? filteredCourses
+      : [
+          ...filteredCourses,
+          ...coursesData.slice(0, 12 - filteredCourses.length),
+        ];
   const displayCourses = totalCards.slice(0, 12);
 
   return (
@@ -64,7 +74,7 @@ export default function CoursesPage() {
       {/* Blueprint Header with Search Bar */}
       <section className="w-full blueprint-grid text-white py-14 sm:py-20 relative">
         <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-sans">
+          <h1 className="text-[36px] font-semibold leading-[120%] tracking-[-1%] text-center">
             Find Your Next Course
           </h1>
 

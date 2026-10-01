@@ -26,7 +26,7 @@ export function AuthTopLogo() {
       >
         <div className="w-10 h-10 overflow-hidden flex items-center">
           <Image
-            src="/images/logo.png"
+            src="/images/authlogo (2).png"
             alt="ByteSpace"
             width={140}
             height={36}
@@ -39,11 +39,17 @@ export function AuthTopLogo() {
   );
 }
 
-export function AuthVisualCollage({ title, description }: AuthVisualCollageProps) {
+export function AuthVisualCollage({
+  title,
+  description,
+}: AuthVisualCollageProps) {
   return (
     <div className="w-full text-white space-y-6 lg:space-y-8">
       {/* Hidden SVG defs for color filter (tints white 3D images to vibrant brand lime #D2FF00) */}
-      <svg className="absolute w-0 h-0 pointer-events-none opacity-0" aria-hidden="true">
+      <svg
+        className="absolute w-0 h-0 pointer-events-none opacity-0"
+        aria-hidden="true"
+      >
         <defs>
           <filter id="lime-tint-auth" colorInterpolationFilters="sRGB">
             <feColorMatrix
@@ -114,7 +120,10 @@ export function AuthVisualCollage({ title, description }: AuthVisualCollageProps
               </div>
             </div>
             <span className="text-xs font-bold text-[#0047FF]">
-              $25<span className="text-[9px] text-slate-400 font-normal">/lifetime</span>
+              $25
+              <span className="text-[9px] text-slate-400 font-normal">
+                /lifetime
+              </span>
             </span>
           </div>
         </div>
@@ -178,7 +187,10 @@ export function AuthVisualCollage({ title, description }: AuthVisualCollageProps
               </div>
             </div>
             <span className="text-xs sm:text-sm font-bold text-[#0047FF]">
-              $25<span className="text-[9px] text-slate-400 font-normal">/lifetime</span>
+              $25
+              <span className="text-[9px] text-slate-400 font-normal">
+                /lifetime
+              </span>
             </span>
           </div>
         </div>

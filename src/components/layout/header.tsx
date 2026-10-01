@@ -14,7 +14,11 @@ export function Header() {
   const cartCount = 1;
 
   // Do not render Header on login or register/signup pages
-  if (pathname === "/login" || pathname === "/register" || pathname === "/signup") {
+  if (
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname === "/signup"
+  ) {
     return null;
   }
 
@@ -84,7 +88,7 @@ export function Header() {
 
             {/* Shopping Cart Icon */}
             <Link
-              href="/courses/build-digital-asset"
+              href="#"
               className="relative p-1 text-white hover:text-white/80 transition-colors"
               title="Shopping Cart"
             >
@@ -98,7 +102,7 @@ export function Header() {
           {/* Mobile Menu Toggle */}
           <div className="flex md:hidden items-center gap-3">
             <Link
-              href="/courses/build-digital-asset"
+              href="#"
               className="relative p-1 text-white hover:text-white/80"
             >
               <ShoppingBag className="w-5 h-5 stroke-[1.75]" />

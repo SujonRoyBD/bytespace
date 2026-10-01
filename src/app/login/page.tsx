@@ -3,7 +3,10 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { AuthVisualCollage, AuthTopLogo } from "@/components/auth/auth-visual-collage";
+import {
+  AuthVisualCollage,
+  AuthTopLogo,
+} from "@/components/auth/auth-visual-collage";
 
 export default function LoginPage() {
   const [email, setEmail] = React.useState("designer@example.com");

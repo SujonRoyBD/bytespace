@@ -7,7 +7,10 @@ export function CreatorBannerSection() {
   return (
     <section className="w-full blueprint-grid text-white py-16 sm:py-24 md:py-28 relative overflow-hidden">
       {/* Hidden SVG defs for color filter (tints white 3D images to vibrant brand lime #D2FF00) */}
-      <svg className="absolute w-0 h-0 pointer-events-none opacity-0" aria-hidden="true">
+      <svg
+        className="absolute w-0 h-0 pointer-events-none opacity-0"
+        aria-hidden="true"
+      >
         <defs>
           <filter id="lime-tint-banner" colorInterpolationFilters="sRGB">
             <feColorMatrix
@@ -86,10 +89,10 @@ export function CreatorBannerSection() {
         <Image
           src="/images/rightSite.png"
           alt="3D White Cylinder"
-          width={280}
-          height={320}
+          width={180}
+          height={220}
           style={{ filter: "grayscale(100%) brightness(1.75) contrast(1.15)" }}
-          className="w-full h-auto object-contain -rotate-12 drop-shadow-2xl"
+          className="w-full pl-13 mt-6 h-70 object-contain -rotate-1 drop-shadow-2xl"
         />
       </div>
 
@@ -112,7 +115,11 @@ export function CreatorBannerSection() {
         </h2>
 
         <p className="font-satoshi text-xs sm:text-sm md:text-[15px] text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
-          Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
+          Experience the collaboration of numerous creators and an expanding
+          selection of courses. Register now and become a part of a community
+          comprising over 10,000 local and international creators. Utilize our
+          Course Editor, and showcase your expertise by publishing your finest
+          course on the ByteSpace Course Library.
         </p>
 
         <div className="pt-2 sm:pt-4">

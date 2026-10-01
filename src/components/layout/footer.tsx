@@ -12,7 +12,11 @@ export function Footer() {
   const [subscribed, setSubscribed] = React.useState(false);
 
   // Do not render Footer on login or register/signup pages
-  if (pathname === "/login" || pathname === "/register" || pathname === "/signup") {
+  if (
+    pathname === "/login" ||
+    pathname === "/register" ||
+    pathname === "/signup"
+  ) {
     return null;
   }
 
@@ -45,11 +49,15 @@ export function Footer() {
               />
             </Link>
 
-            <p className="text-xs text-slate-500 max-w-sm leading-relaxed">
-              Stay Up to date with our latest features and releases by joining our newsletter.
+            <p className="font-satoshi text-sm font-normal leading-[160%] tracking-normal">
+              Stay Up to date with our latest features and releases by joining
+              our newsletter.
             </p>
 
-            <form onSubmit={handleSubmit} className="flex items-center max-w-md gap-2 pt-2">
+            <form
+              onSubmit={handleSubmit}
+              className="flex items-center max-w-md gap-2 pt-2"
+            >
               <div className="relative flex-1">
                 <input
                   type="email"
@@ -76,62 +84,108 @@ export function Footer() {
             )}
 
             <p className="text-[11px] text-slate-400 max-w-sm leading-normal">
-              By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
+              By subscribing, you agree to our Privacy Policy and consent to
+              receive updates from our company.
             </p>
           </div>
 
           {/* Navigation Links Columns */}
           <div className="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 text-xs">
             <div className="space-y-3">
-              <Link href="/courses" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Featured Courses
               </Link>
-              <Link href="/courses" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Featured Categories
               </Link>
-              <Link href="/courses?category=Business" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=Business"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Business
               </Link>
-              <Link href="/courses?category=IT" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=IT"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 IT
               </Link>
-              <Link href="/courses?category=UI%2FUX+Design" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=UI%2FUX+Design"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Design
               </Link>
             </div>
 
             <div className="space-y-3">
-              <Link href="/courses?category=Development" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=Development"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Development
               </Link>
-              <Link href="/courses?category=Marketing" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=Marketing"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Marketing
               </Link>
-              <Link href="/courses?category=Photography" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=Photography"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Photography
               </Link>
-              <Link href="/courses?category=Finance" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=Finance"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Finance
               </Link>
-              <Link href="/courses?category=Sport" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/courses?category=Sport"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Sport
               </Link>
             </div>
 
             <div className="space-y-3">
-              <Link href="/creators/purepearl-studio" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="/creators/purepearl-studio"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Become a Creator
               </Link>
-              <Link href="#" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="#"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Affiliate Program
               </Link>
-              <Link href="#" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="#"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Contact
               </Link>
-              <Link href="#" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="#"
+                className="block font-satoshi text-sm font-normal leading-[160%] tracking-normal hover:text-[#0047FF] transition-colors"
+              >
                 Help
               </Link>
-              <Link href="#" className="block text-slate-600 hover:text-[#0047FF] transition-colors">
+              <Link
+                href="#"
+                className="block text-slate-600 hover:text-[#0047FF] transition-colors"
+              >
                 About
               </Link>
             </div>

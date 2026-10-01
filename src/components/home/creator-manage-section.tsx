@@ -10,8 +10,7 @@ export function CreatorManageSection() {
   ];
 
   return (
-    <section className="w-full py-12 sm:py-20 lg:py-24 overflow-hidden relative bg-[#FAFAFA]">
-      {/* Background Radial Gradient Glow at Bottom Left (Lime) */}
+    <section className="w-full  overflow-hidden relative bg-[#FAFAFA]">
       <div
         className="absolute -bottom-10 -left-10 w-[300px] sm:w-[550px] lg:w-[750px] h-[300px] sm:h-[550px] lg:h-[750px] pointer-events-none z-0"
         style={{
@@ -19,7 +18,7 @@ export function CreatorManageSection() {
             "radial-gradient(50% 50% at 30% 70%, rgba(203, 252, 1, 0.35) 0%, rgba(203, 252, 1, 0.08) 53%, rgba(203, 252, 1, 0) 100%)",
         }}
       />
-      {/* Background Radial Gradient Glow at Bottom Right (Soft Blue) */}
+
       <div
         className="absolute -bottom-10 -right-10 w-[300px] sm:w-[550px] lg:w-[750px] h-[300px] sm:h-[550px] lg:h-[750px] pointer-events-none z-0"
         style={{
@@ -30,11 +29,9 @@ export function CreatorManageSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          {/* Left: Visual Showcase (Stacked Blue Cards -> Instructor Image -> 3D Lime Pitch -> Happy Students Card) */}
           <div className="lg:col-span-7 relative flex items-center justify-center min-h-[380px] xs:min-h-[440px] sm:min-h-[500px] lg:min-h-[540px] pt-4 sm:pt-6 pb-6 sm:pb-10">
-            {/* Layer 1: Stacked Blue Revenue Cards (Positioned Top Left) */}
             <div className="absolute left-1 sm:left-4 md:left-6 top-2 sm:top-6 lg:top-10 z-10 space-y-2 sm:space-y-3.5">
-              {/* Card 1: Total Revenue */}
+              {/* Card 1:  */}
               <div className="w-[145px] xs:w-[170px] sm:w-[200px] lg:w-[220px] bg-[#003BE2] text-white rounded-xl sm:rounded-2xl p-2.5 sm:p-3.5 lg:p-4 shadow-2xl space-y-0.5 sm:space-y-1 border border-blue-400/20">
                 <div className="text-[10px] sm:text-[11px] font-medium text-blue-100">
                   Total Revenue
@@ -55,7 +52,9 @@ export function CreatorManageSection() {
                 <div className="text-[10px] sm:text-[11px] font-medium text-blue-100">
                   Year to Date
                 </div>
-                <div className="text-[8px] sm:text-[9px] text-blue-200 font-medium">2023</div>
+                <div className="text-[8px] sm:text-[9px] text-blue-200 font-medium">
+                  2023
+                </div>
                 <div className="flex items-center justify-between pt-0.5">
                   <span className="text-base sm:text-xl lg:text-2xl font-bold text-white tracking-tight font-sans">
                     $1,200.38
@@ -67,7 +66,6 @@ export function CreatorManageSection() {
               </div>
             </div>
 
-            {/* Layer 2: 3D Lime Pitch / Spiral Squiggle (Floating Right Behind Instructor) */}
             <div className="absolute right-4 sm:right-32 lg:right-60 top-6 sm:top-16 lg:top-24 rotate-20 z-10 w-16 sm:w-24 lg:w-32 pointer-events-none select-none animate-float-slow">
               <img
                 src="/images/2dpitch.png"
@@ -86,13 +84,18 @@ export function CreatorManageSection() {
             </div>
 
             {/* Layer 4: Floating Happy Students Card (Bottom Right Overlay) */}
-            <div className="absolute right-1 sm:right-4 md:right-8 lg:right-12 bottom-1 sm:bottom-4 z-30 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 lg:p-4.5 shadow-2xl border border-slate-100 text-left w-36 xs:w-44 sm:w-52 lg:w-60">
+            <div className="absolute right-1 sm:right-4 md:right-8 lg:right-22 top-[40%] sm:top-[45%] z-30 bg-white rounded-xl sm:rounded-2xl p-2.5 sm:p-4 lg:p-4.5 shadow-2xl border border-slate-100 text-left w-36 xs:w-44 sm:w-52 lg:w-60">
               <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-slate-900">
                 Happy Students
               </div>
+
               <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-slate-600 font-medium my-0.5 sm:my-1">
                 <span className="font-bold text-slate-900">4.5</span>
-                <span className="text-slate-400 text-[10px] sm:text-[11px]">(240)</span>
+
+                <span className="text-slate-400 text-[10px] sm:text-[11px]">
+                  (240)
+                </span>
+
                 <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-[#FFB800] text-[#FFB800]" />
               </div>
 
@@ -111,6 +114,7 @@ export function CreatorManageSection() {
                     className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 rounded-full object-cover ring-2 ring-white"
                   />
                 ))}
+
                 <span className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 rounded-full bg-[#D2FF00] text-[#0f172a] text-[8px] sm:text-[9px] lg:text-[10px] font-extrabold flex items-center justify-center ring-2 ring-white shrink-0">
                   2K+
                 </span>
@@ -151,4 +155,3 @@ export function CreatorManageSection() {
     </section>
   );
 }
-
